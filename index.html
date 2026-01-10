@@ -70,7 +70,7 @@
       border: 1px solid #e5e7eb;
       margin-top: 1.25rem;
       
-      width: 50%;
+      width: 100%;
       padding: 1rem;
       overflow-y: auto;
       max-height: 80vh;
@@ -257,6 +257,13 @@
   کردن قسمت خالی متن به کار میرود.
   </p>
     
+    <img
+      src="hero.jpg"
+      alt="Protester holding Iran flag"
+      class="hero-image"
+    />
+    
+    
     <div class="layout">
       <section class="card" aria-label="Generate your letter">
 
@@ -293,11 +300,6 @@
       </section>
         
 
-    <img
-      src="hero.jpg"
-      alt="Protester holding Iran flag"
-      class="hero-image"
-    />
 
   </div>
 
@@ -341,7 +343,7 @@
       ]);
 
       title = title.replace(PLACEHOLDER, name);
-      content = content.replace(PLACEHOLDER, name);
+      content = content.replaceAll(PLACEHOLDER, name);
 
       outputTitle.value = title.trim();
       outputContent.value = content.trim();
