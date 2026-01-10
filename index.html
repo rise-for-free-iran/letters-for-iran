@@ -162,18 +162,34 @@
       font-size: 1rem;
     }
 
-    #output-text {
+    textarea {
       width: 100%;
-      min-height: 220px;
+      min-height: 140px;
       resize: vertical;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 0.95rem;
       line-height: 1.6;
       padding: 0.6rem 0.65rem;
-      border-radius: 8px;
+      border-radius: 10px;
       border: 1px solid #d1d5db;
       outline: none;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.7rem;
+      background: white;
+      color: #111827;
+      box-sizing: border-box;
+    }
+
+    textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+    }
+    
+    #output-title {
+      min-height: 15px;
+    }
+
+    #output-content {
+      min-height: 200px;
     }
 
     #output-text:focus {
@@ -257,14 +273,18 @@
         </form>
 
         <section id="output-section" hidden>
-          <h3 dir="rtl">نامه‌ی تولیدی</h3>
-          <textarea id="output-text" spellcheck="true"></textarea>
+          <h3 dir="rtl">عنوان نامه</h3>
+          <textarea id="output-title" spellcheck="true"></textarea>
+
+          <h3 dir="rtl" style="margin-top:1rem;">متن نامه</h3>
+          <textarea id="output-content" spellcheck="true"></textarea>
 
           <div class="output-actions">
-            <button type="button" id="copy-btn">Copy to clipboard</button>
+            <button type="button" id="copy-btn">Copy content</button>
             <p id="status"></p>
           </div>
-
+  
+  
           <p class="modify-note" lang="fa" dir="rtl">
   این متن فقط یک نقطه‌ی شروع است. با خیال راحت آن را هر طور که می‌خواهید تغییر دهید تا با داستان، لحن و خواسته‌های خودتان هماهنگ شود.
           </p>
@@ -281,72 +301,86 @@
 
   </div>
 
-  <script>
-    const TEXT_COUNT = 1000; 
-    const PLACEHOLDER = "_____";
+<script>
+  const TITLE_COUNT = 1000;
+  const CONTENT_COUNT = 1000;
+  const PLACEHOLDER = "_____";
 
-    const form = document.getElementById("name-form");
-    const nameInput = document.getElementById("full-name");
-    const outputSection = document.getElementById("output-section");
-    const outputText = document.getElementById("output-text");
-    const copyBtn = document.getElementById("copy-btn");
-    const statusEl = document.getElementById("status");
+  const form = document.getElementById("name-form");
+  const nameInput = document.getElementById("full-name");
+  const outputSection = document.getElementById("output-section");
+  const outputTitle = document.getElementById("output-title");
+  const outputContent = document.getElementById("output-content");
+  const copyBtn = document.getElementById("copy-btn");
+  const statusEl = document.getElementById("status");
 
-    function getRandomIndex() {
-      return Math.floor(Math.random() * TEXT_COUNT) + 1;
+  function getRandom(max) {
+    return Math.floor(Math.random() * max) + 1;
+  }
+
+  async function loadFile(path) {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`Could not load ${path}`);
+    return await response.text();
+  }
+
+  async function loadRandomTemplate(name) {
+    statusEl.classList.remove("error");
+    statusEl.textContent = "در حال بارگذاری...";
+
+    const titleIndex = getRandom(TITLE_COUNT);
+    const contentIndex = getRandom(CONTENT_COUNT);
+
+    const titlePath = `titles/${titleIndex}.txt`;
+    const contentPath = `contents/${contentIndex}.txt`;
+
+    try {
+      let [title, content] = await Promise.all([
+        loadFile(titlePath),
+        loadFile(contentPath)
+      ]);
+
+      title = title.replace(PLACEHOLDER, name);
+      content = content.replace(PLACEHOLDER, name);
+
+      outputTitle.value = title.trim();
+      outputContent.value = content.trim();
+
+      outputSection.hidden = false;
+      outputTitle.focus();
+      statusEl.textContent = "";
+
+    } catch (err) {
+      console.error(err);
+      outputSection.hidden = false;
+      outputTitle.value = "";
+      outputContent.value = "";
+      statusEl.textContent = "خطا در بارگذاری متن. دوباره تلاش کنید.";
+      statusEl.classList.add("error");
     }
+  }
 
-    async function loadRandomTemplate(name) {
-      statusEl.classList.remove("error");
-      statusEl.textContent = "Loading template…";
-
-      const index = getRandomIndex();
-      const filePath = `contents/${index}.txt`;
-
-      try {
-        const response = await fetch(filePath);
-        if (!response.ok) {
-          throw new Error(`Could not load ${filePath} (status ${response.status})`);
-        }
-
-        const template = await response.text();
-        const resultText = template.replace(PLACEHOLDER, name);
-
-        outputText.value = resultText;
-        outputSection.hidden = false;
-        outputText.focus();
-        statusEl.textContent = ``;
-      } catch (err) {
-        console.error(err);
-        outputSection.hidden = false;
-        outputText.value = "";
-        statusEl.textContent = "Error loading a template. Please try again.";
-        statusEl.classList.add("error");
-      }
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = nameInput.value.trim();
+    if (!name) {
+      alert("لطفاً نام خود را وارد کنید.");
+      return;
     }
+    loadRandomTemplate(name);
+  });
 
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
+  copyBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(outputContent.value);
+      const oldLabel = copyBtn.textContent;
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => (copyBtn.textContent = oldLabel), 1500);
+    } catch (err) {
+      alert("Could not copy. Please select the text and use Ctrl+C / Cmd+C.");
+    }
+  });
+</script>
 
-      const name = nameInput.value.trim();
-      if (!name) {
-        alert("Please enter your full name.");
-        return;
-      }
-
-      loadRandomTemplate(name);
-    });
-
-    copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(outputText.value);
-        const oldLabel = copyBtn.textContent;
-        copyBtn.textContent = "Copied!";
-        setTimeout(() => (copyBtn.textContent = oldLabel), 1500);
-      } catch (err) {
-        alert("Could not copy. Please select the text and use Ctrl+C / Cmd+C.");
-      }
-    });
-  </script>
 </body>
 </html>
