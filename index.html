@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letters for Iran – Contact Your Representatives</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    header {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0.4rem 0 0.5rem;
+      font-size: 1.7rem;
+    }
+
+    header p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+    
+    .layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .intro-fa {
+      font-size: 0.95rem;
+      margin-bottom: 0.1rem;
+      color: #111827;
+    }
+
+    .hero-image {
+      margin: 1.25rem auto 1.5rem;
+      max-width: 50%;
+      max-height: 70vh; 
+      object-fit: cover;
+      
+      border-radius: 12px;
+      display: block;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);      
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e5e7eb;
+      margin-top: 1.25rem;
+      
+      width: 50%;
+      padding: 1rem;
+      overflow-y: auto;
+      max-height: 80vh;
+      
+    }
+
+    .card h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.2rem;
+    }
+
+    .card p.description {
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    /* Form */
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    label {
+      font-size: 0.9rem;
+    }
+
+    input[type="text"] {
+      padding: 0.4rem 0.6rem;
+      font-size: 0.95rem;
+      min-width: min(240px, 100%);
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input[type="text"]::placeholder {
+      color: #9ca3af;
+    }
+
+    input[type="text"]:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      background: #2563eb;
+      color: #ffffff;
+      font-weight: 500;
+      transition: background 0.12s ease, transform 0.06s ease;
+      white-space: nowrap;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .small-note {
+      font-size: 1rem;
+      color: #6b7280;
+      margin-top: 0.15rem;
+    }
+
+    /* Output section */
+    #output-section {
+      margin-top: 0.75rem;
+    }
+
+    #output-section[hidden] {
+      display: none !important;
+    }
+
+    #output-section h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1rem;
+    }
+
+    #output-text {
+      width: 100%;
+      min-height: 220px;
+      resize: vertical;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      padding: 0.6rem 0.65rem;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      outline: none;
+      margin-bottom: 0.4rem;
+    }
+
+    #output-text:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+    }
+
+    .output-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #copy-btn {
+      background: #16a34a;
+    }
+
+    #copy-btn:hover {
+      background: #15803d;
+    }
+
+    #status {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    #status.error {
+      color: #b91c1c;
+    }
+
+    .modify-note {
+      font-size: 0.85rem;
+      color: #4b5563;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .card {
+        padding: 1rem 0.9rem 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Letters for Iran</h1>
+      
+      <!-- Short bilingual intro -->
+      <p class="intro-fa" lang="fa" dir="rtl">
+        این صفحه برای ایرانیان خارج از کشور است تا راحت‌تر برای سناتورها و نمایندگان خود نامه بنویسند.
+        خیلی ساده، بعد از وارد کردن نامتان، یکی از چند صد نامه‌ای که از قبل تولید شده است به طور شانسی با نام شما تولید میشود.
+      </p>
+
+    </header>
+    
+  <p class="small-note" dir="rtl">
+  به هیچ عنوان نام شما ذخیره، جمع‌آوری یا به اشتراک گذاشته نمی‌شود. نام شما فقط برای جایگزین 
+  کردن قسمت خالی متن به کار میرود.
+  </p>
+    
+    <div class="layout">
+      <section class="card" aria-label="Generate your letter">
+
+        <form id="name-form" dir="rtl">
+          <label for="full-name">اسم و فامیل به انگلیسی</label>
+          <input
+            type="text"
+            id="full-name"
+            required
+            placeholder="e.g. Sara Ahmadi"
+            autocomplete="name"
+          />
+          <button type="submit">نامه را تولید کن</button>
+        </form>
+
+        <section id="output-section" hidden>
+          <h3 dir="rtl">نامه‌ی تولیدی</h3>
+          <textarea id="output-text" spellcheck="true"></textarea>
+
+          <div class="output-actions">
+            <button type="button" id="copy-btn">Copy to clipboard</button>
+            <p id="status"></p>
+          </div>
+
+          <p class="modify-note" lang="fa" dir="rtl">
+  این متن فقط یک نقطه‌ی شروع است. با خیال راحت آن را هر طور که می‌خواهید تغییر دهید تا با داستان، لحن و خواسته‌های خودتان هماهنگ شود.
+          </p>
+
+        </section>
+      </section>
+        
+
+    <img
+      src="hero.jpg"
+      alt="Protester holding Iran flag"
+      class="hero-image"
+    />
+
+  </div>
+
+  <script>
+    const TEXT_COUNT = 1000; 
+    const PLACEHOLDER = "_____";
+
+    const form = document.getElementById("name-form");
+    const nameInput = document.getElementById("full-name");
+    const outputSection = document.getElementById("output-section");
+    const outputText = document.getElementById("output-text");
+    const copyBtn = document.getElementById("copy-btn");
+    const statusEl = document.getElementById("status");
+
+    function getRandomIndex() {
+      return Math.floor(Math.random() * TEXT_COUNT) + 1;
+    }
+
+    async function loadRandomTemplate(name) {
+      statusEl.classList.remove("error");
+      statusEl.textContent = "Loading template…";
+
+      const index = getRandomIndex();
+      const filePath = `contents/${index}.txt`;
+
+      try {
+        const response = await fetch(filePath);
+        if (!response.ok) {
+          throw new Error(`Could not load ${filePath} (status ${response.status})`);
+        }
+
+        const template = await response.text();
+        const resultText = template.replace(PLACEHOLDER, name);
+
+        outputText.value = resultText;
+        outputSection.hidden = false;
+        outputText.focus();
+        statusEl.textContent = ``;
+      } catch (err) {
+        console.error(err);
+        outputSection.hidden = false;
+        outputText.value = "";
+        statusEl.textContent = "Error loading a template. Please try again.";
+        statusEl.classList.add("error");
+      }
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const name = nameInput.value.trim();
+      if (!name) {
+        alert("Please enter your full name.");
+        return;
+      }
+
+      loadRandomTemplate(name);
+    });
+
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(outputText.value);
+        const oldLabel = copyBtn.textContent;
+        copyBtn.textContent = "Copied!";
+        setTimeout(() => (copyBtn.textContent = oldLabel), 1500);
+      } catch (err) {
+        alert("Could not copy. Please select the text and use Ctrl+C / Cmd+C.");
+      }
+    });
+  </script>
+</body>
+</html>
