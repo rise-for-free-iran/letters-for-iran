@@ -1,0 +1,498 @@
+{
+  "MD": [
+    {
+      "name": "Angela D. Alsobrooks",
+      "phone": "202-224-4524"
+    },
+    {
+      "name": "Chris Van Hollen",
+      "phone": "202-224-4654"
+    }
+  ],
+  "WI": [
+    {
+      "name": "Tammy Baldwin",
+      "phone": "202-224-5653"
+    },
+    {
+      "name": "Ron Johnson",
+      "phone": "202-224-5323"
+    }
+  ],
+  "IN": [
+    {
+      "name": "Jim Banks",
+      "phone": "202-224-4814"
+    },
+    {
+      "name": "Todd Young",
+      "phone": "202-224-5623"
+    }
+  ],
+  "WY": [
+    {
+      "name": "John Barrasso",
+      "phone": "202-224-6441"
+    },
+    {
+      "name": "Cynthia M. Lummis",
+      "phone": "202-224-3424"
+    }
+  ],
+  "CO": [
+    {
+      "name": "Michael F. Bennet",
+      "phone": "202-224-5852"
+    },
+    {
+      "name": "John W. Hickenlooper",
+      "phone": "202-224-5941"
+    }
+  ],
+  "TN": [
+    {
+      "name": "Marsha Blackburn",
+      "phone": "202-224-3344"
+    },
+    {
+      "name": "Bill Hagerty",
+      "phone": "202-224-4944"
+    }
+  ],
+  "CT": [
+    {
+      "name": "Richard Blumenthal",
+      "phone": "202-224-2823"
+    },
+    {
+      "name": "Christopher Murphy",
+      "phone": "202-224-4041"
+    }
+  ],
+  "DE": [
+    {
+      "name": "Lisa Blunt Rochester",
+      "phone": "202-224-2441"
+    },
+    {
+      "name": "Christopher A. Coons",
+      "phone": "202-224-5042"
+    }
+  ],
+  "NJ": [
+    {
+      "name": "Cory A. Booker",
+      "phone": "202-224-3224"
+    },
+    {
+      "name": "Andy Kim",
+      "phone": "202-224-4744"
+    }
+  ],
+  "AR": [
+    {
+      "name": "John Boozman",
+      "phone": "202-224-4843"
+    },
+    {
+      "name": "Tom Cotton",
+      "phone": "202-224-2353"
+    }
+  ],
+  "AL": [
+    {
+      "name": "Katie Britt",
+      "phone": "202-224-5744"
+    },
+    {
+      "name": "Tommy Tuberville",
+      "phone": "202-224-4124"
+    }
+  ],
+  "NC": [
+    {
+      "name": "Ted Budd",
+      "phone": "202-224-3154"
+    },
+    {
+      "name": "Thom Tillis",
+      "phone": "202-224-6342"
+    }
+  ],
+  "WA": [
+    {
+      "name": "Maria Cantwell",
+      "phone": "202-224-3441"
+    },
+    {
+      "name": "Patty Murray",
+      "phone": "202-224-2621"
+    }
+  ],
+  "WV": [
+    {
+      "name": "Shelley Moore Capito",
+      "phone": "202-224-6472"
+    },
+    {
+      "name": "James C. Justice",
+      "phone": "202-224-3954"
+    }
+  ],
+  "LA": [
+    {
+      "name": "Bill Cassidy",
+      "phone": "202-224-5824"
+    },
+    {
+      "name": "John Kennedy",
+      "phone": "202-224-4623"
+    }
+  ],
+  "ME": [
+    {
+      "name": "Susan M. Collins",
+      "phone": "202-224-2523"
+    },
+    {
+      "name": "Angus S. King, Jr.",
+      "phone": "202-224-5344"
+    }
+  ],
+  "TX": [
+    {
+      "name": "John Cornyn",
+      "phone": "202-224-2934"
+    },
+    {
+      "name": "Ted Cruz",
+      "phone": "202-224-5922"
+    }
+  ],
+  "NV": [
+    {
+      "name": "Catherine Cortez Masto",
+      "phone": "202-224-3542"
+    },
+    {
+      "name": "Jacky Rosen",
+      "phone": "202-224-6244"
+    }
+  ],
+  "ND": [
+    {
+      "name": "Kevin Cramer",
+      "phone": "202-224-2043"
+    },
+    {
+      "name": "John Hoeven",
+      "phone": "202-224-2551"
+    }
+  ],
+  "ID": [
+    {
+      "name": "Mike Crapo",
+      "phone": "202-224-6142"
+    },
+    {
+      "name": "James E. Risch",
+      "phone": "202-224-2752"
+    }
+  ],
+  "UT": [
+    {
+      "name": "John R. Curtis",
+      "phone": "202-224-5251"
+    },
+    {
+      "name": "Mike Lee",
+      "phone": "202-224-5444"
+    }
+  ],
+  "MT": [
+    {
+      "name": "Steve Daines",
+      "phone": "202-224-2651"
+    },
+    {
+      "name": "Tim Sheehy",
+      "phone": "202-224-2644"
+    }
+  ],
+  "IL": [
+    {
+      "name": "Tammy Duckworth",
+      "phone": "202-224-2854"
+    },
+    {
+      "name": "Richard J. Durbin",
+      "phone": "202-224-2152"
+    }
+  ],
+  "IA": [
+    {
+      "name": "Joni Ernst",
+      "phone": "202-224-3254"
+    },
+    {
+      "name": "Chuck Grassley",
+      "phone": "202-224-3744"
+    }
+  ],
+  "PA": [
+    {
+      "name": "John Fetterman",
+      "phone": "202-224-4254"
+    },
+    {
+      "name": "David H. McCormick",
+      "phone": "202-224-6324"
+    }
+  ],
+  "NE": [
+    {
+      "name": "Deb Fischer",
+      "phone": "202-224-6551"
+    },
+    {
+      "name": "Pete Ricketts",
+      "phone": "202-224-4224"
+    }
+  ],
+  "AZ": [
+    {
+      "name": "Ruben M. Gallego",
+      "phone": "202-224-4521"
+    },
+    {
+      "name": "Mark Kelly",
+      "phone": "202-224-2235"
+    }
+  ],
+  "NY": [
+    {
+      "name": "Kirsten E. Gillibrand",
+      "phone": "202-224-4451"
+    },
+    {
+      "name": "Charles E. Schumer",
+      "phone": "202-224-6542"
+    }
+  ],
+  "SC": [
+    {
+      "name": "Lindsey Graham",
+      "phone": "202-224-5972"
+    },
+    {
+      "name": "Tim Scott",
+      "phone": "202-224-6121"
+    }
+  ],
+  "NH": [
+    {
+      "name": "Maggie Hassan",
+      "phone": "202-224-3324"
+    },
+    {
+      "name": "Jeanne Shaheen",
+      "phone": "202-224-2841"
+    }
+  ],
+  "MO": [
+    {
+      "name": "Josh Hawley",
+      "phone": "202-224-6154"
+    },
+    {
+      "name": "Eric Schmitt",
+      "phone": "202-224-5721"
+    }
+  ],
+  "NM": [
+    {
+      "name": "Martin Heinrich",
+      "phone": "202-224-5521"
+    },
+    {
+      "name": "Ben Ray Luján",
+      "phone": "202-224-6621"
+    }
+  ],
+  "HI": [
+    {
+      "name": "Mazie K. Hirono",
+      "phone": "202-224-6361"
+    },
+    {
+      "name": "Brian Schatz",
+      "phone": "202-224-3934"
+    }
+  ],
+  "OH": [
+    {
+      "name": "Jon Husted",
+      "phone": "202-224-3353"
+    },
+    {
+      "name": "Bernie F. Moreno",
+      "phone": "202-224-2315"
+    }
+  ],
+  "MS": [
+    {
+      "name": "Cindy Hyde-Smith",
+      "phone": "202-224-5054"
+    },
+    {
+      "name": "Roger F. Wicker",
+      "phone": "202-224-6253"
+    }
+  ],
+  "VA": [
+    {
+      "name": "Tim Kaine",
+      "phone": "202-224-4024"
+    },
+    {
+      "name": "Mark R. Warner",
+      "phone": "202-224-2023"
+    }
+  ],
+  "MN": [
+    {
+      "name": "Amy Klobuchar",
+      "phone": "202-224-3244"
+    },
+    {
+      "name": "Tina Smith",
+      "phone": "202-224-5641"
+    }
+  ],
+  "OK": [
+    {
+      "name": "James Lankford",
+      "phone": "202-224-5754"
+    },
+    {
+      "name": "Markwayne Mullin",
+      "phone": "202-224-4721"
+    }
+  ],
+  "MA": [
+    {
+      "name": "Edward J. Markey",
+      "phone": "202-224-2742"
+    },
+    {
+      "name": "Elizabeth Warren",
+      "phone": "202-224-4543"
+    }
+  ],
+  "KY": [
+    {
+      "name": "Mitch McConnell",
+      "phone": "202-224-2541"
+    },
+    {
+      "name": "Rand Paul",
+      "phone": "202-224-4343"
+    }
+  ],
+  "OR": [
+    {
+      "name": "Jeff Merkley",
+      "phone": "202-224-3753"
+    },
+    {
+      "name": "Ron Wyden",
+      "phone": "202-224-5244"
+    }
+  ],
+  "FL": [
+    {
+      "name": "Ashley Moody",
+      "phone": "202-224-3041"
+    },
+    {
+      "name": "Rick Scott",
+      "phone": "202-224-5274"
+    }
+  ],
+  "KS": [
+    {
+      "name": "Jerry Moran",
+      "phone": "202-224-6521"
+    }
+  ],
+  "AK": [
+    {
+      "name": "Lisa Murkowski",
+      "phone": "202-224-6665"
+    },
+    {
+      "name": "Dan Sullivan",
+      "phone": "202-224-3004"
+    }
+  ],
+  "GA": [
+    {
+      "name": "Jon Ossoff",
+      "phone": "202-224-3521"
+    },
+    {
+      "name": "Raphael G. Warnock",
+      "phone": "202-224-3643"
+    }
+  ],
+  "CA": [
+    {
+      "name": "Alex Padilla",
+      "phone": "202-224-3553"
+    },
+    {
+      "name": "Adam B. Schiff",
+      "phone": "202-224-3841"
+    }
+  ],
+  "MI": [
+    {
+      "name": "Gary C. Peters",
+      "phone": "202-224-6221"
+    },
+    {
+      "name": "Elissa B. Slotkin",
+      "phone": "202-224-4822"
+    }
+  ],
+  "RI": [
+    {
+      "name": "Jack Reed",
+      "phone": "202-224-4642"
+    },
+    {
+      "name": "Sheldon Whitehouse",
+      "phone": "202-224-2921"
+    }
+  ],
+  "SD": [
+    {
+      "name": "Mike Rounds",
+      "phone": "202-224-5842"
+    },
+    {
+      "name": "John Thune",
+      "phone": "202-224-2321"
+    }
+  ],
+  "VT": [
+    {
+      "name": "Bernard Sanders",
+      "phone": "202-224-5141"
+    },
+    {
+      "name": "Peter Welch",
+      "phone": "202-224-4242"
+    }
+  ]
+}
