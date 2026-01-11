@@ -57,7 +57,6 @@
       max-width: 50%;
       max-height: 70vh; 
       object-fit: cover;
-      
       border-radius: 12px;
       display: block;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);      
@@ -69,12 +68,11 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
       border: 1px solid #e5e7eb;
       margin-top: 1.25rem;
-      
       width: 100%;
       padding: 1rem;
-      overflow-y: auto;
-      max-height: 80vh;
-      
+      /* no internal scroll, let the page scroll */
+      overflow-y: visible;
+      max-height: none;
     }
 
     .card h2 {
@@ -101,21 +99,27 @@
       font-size: 0.9rem;
     }
 
-    input[type="text"] {
+    input[type="text"],
+    select {
       padding: 0.4rem 0.6rem;
       font-size: 0.95rem;
-      min-width: min(240px, 100%);
       border-radius: 999px;
       border: 1px solid #d1d5db;
       outline: none;
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      background: #ffffff;
+    }
+
+    input[type="text"] {
+      min-width: min(240px, 100%);
     }
 
     input[type="text"]::placeholder {
       color: #9ca3af;
     }
 
-    input[type="text"]:focus {
+    input[type="text"]:focus,
+    select:focus {
       border-color: #2563eb;
       box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
     }
@@ -146,6 +150,38 @@
       font-size: 1rem;
       color: #6b7280;
       margin-top: 0.15rem;
+    }
+
+    /* Senator selection */
+    #senator-section {
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    #senator-section[hidden] {
+      display: none !important;
+    }
+
+    #senator-section p {
+      margin: 0 0 0.35rem;
+    }
+
+    .senator-option {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .senator-option input[type="radio"] {
+      accent-color: #2563eb;
+    }
+
+    #senator-info {
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: #4b5563;
     }
 
     /* Output section */
@@ -192,11 +228,6 @@
       min-height: 200px;
     }
 
-    #output-text:focus {
-      border-color: #2563eb;
-      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
-    }
-
     .output-actions {
       display: flex;
       flex-wrap: wrap;
@@ -236,6 +267,10 @@
       .card {
         padding: 1rem 0.9rem 1.1rem;
       }
+
+      .hero-image {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -246,16 +281,19 @@
       
       <!-- Short bilingual intro -->
       <p class="intro-fa" lang="fa" dir="rtl">
-        این صفحه برای ایرانیان خارج از کشور است تا راحت‌تر برای سناتورها و نمایندگان خود نامه بنویسند.
-        خیلی ساده، بعد از وارد کردن نامتان، یکی از چند صد نامه‌ای که از قبل تولید شده است به طور شانسی با نام شما تولید میشود.
+        در خارج از ایران زندگی میکنید و میخواهید کمکی به انقلاب مردم ایران بکنید؟
       </p>
 
+      <p class="intro-fa" lang="fa" dir="rtl">
+        این وب‌سایت به شما کمک میکند که راحت‌تر سناتورها و نمایندگان خود را یافته و با آنها مکاتبه کنید.
+        خیلی ساده، بعد از وارد کردن نامتان، یکی از چند صد نامه‌ای که از قبل تولید شده است به طور شانسی با نام شما تولید میشود.
+      </p>
     </header>
     
-  <p class="small-note" dir="rtl">
-  به هیچ عنوان نام شما ذخیره، جمع‌آوری یا به اشتراک گذاشته نمی‌شود. نام شما فقط برای جایگزین 
-  کردن قسمت خالی متن به کار میرود.
-  </p>
+    <p class="small-note" dir="rtl">
+      به هیچ عنوان نام شما ذخیره، جمع‌آوری یا به اشتراک گذاشته نمی‌شود. نام شما فقط برای جایگزین 
+      کردن قسمت خالی متن به کار میرود.
+    </p>
     
     <img
       src="hero.jpg"
@@ -263,10 +301,10 @@
       class="hero-image"
     />
     
-    
     <div class="layout">
       <section class="card" aria-label="Generate your letter">
 
+        <!-- FORM wraps senator-section AND the button -->
         <form id="name-form" dir="rtl">
           <label for="full-name">اسم و فامیل به انگلیسی</label>
           <input
@@ -276,7 +314,21 @@
             placeholder="e.g. Sara Ahmadi"
             autocomplete="name"
           />
-          <button type="submit">نامه را تولید کن</button>
+
+          <label for="state-select">ایالت</label>
+          <select id="state-select" disabled>
+            <option>Loading states…</option>
+          </select>
+
+          <!-- Senators for selected state -->
+          <section id="senator-section" dir="rtl" hidden>
+            <p>انتخاب کن که با کدام سناتور میخواهی تماس بگیری</p>
+            <div id="senator-list"></div>
+            <div id="senator-info"></div>
+          </section>
+
+          <!-- Button: hidden at first, appears only after state selection -->
+          <button id="generate-btn" type="submit" hidden>نامه را تولید کن</button>
         </form>
 
         <section id="output-section" hidden>
@@ -287,23 +339,22 @@
           <textarea id="output-content" spellcheck="true"></textarea>
 
           <div class="output-actions">
-            <button type="button" id="copy-btn">Copy content</button>
+            <button type="button" id="copy-btn">متن نامه را کپی کن</button>
             <p id="status"></p>
           </div>
   
-  
           <p class="modify-note" lang="fa" dir="rtl">
-  این متن فقط یک نقطه‌ی شروع است. با خیال راحت آن را هر طور که می‌خواهید تغییر دهید تا با داستان، لحن و خواسته‌های خودتان هماهنگ شود.
+            این متن فقط یک نقطه‌ی شروع است. با خیال راحت آن را هر طور که می‌خواهید تغییر دهید تا با داستان، لحن و خواسته‌های خودتان هماهنگ شود.
           </p>
-
         </section>
       </section>
-        
-
-
-  </div>
+    </div>
 
 <script>
+  // Senators data will be loaded from external JSON
+  let SENATORS_BY_STATE = {};
+  let selectedSenatorName = ""; // keep track of chosen senator
+
   const TITLE_COUNT = 500;
   const CONTENT_COUNT = 500;
   const PLACEHOLDER = "_____";
@@ -316,6 +367,12 @@
   const copyBtn = document.getElementById("copy-btn");
   const statusEl = document.getElementById("status");
 
+  const stateSelect = document.getElementById("state-select");
+  const senatorSection = document.getElementById("senator-section");
+  const senatorList = document.getElementById("senator-list");
+  const senatorInfo = document.getElementById("senator-info");
+  const generateBtn = document.getElementById("generate-btn");
+
   function getRandom(max) {
     return Math.floor(Math.random() * max) + 1;
   }
@@ -324,6 +381,15 @@
     const response = await fetch(path);
     if (!response.ok) throw new Error(`Could not load ${path}`);
     return await response.text();
+  }
+
+  // 🔹 Hide and clear the generated letter
+  function resetOutput() {
+    outputSection.hidden = true;
+    outputTitle.value = "";
+    outputContent.value = "";
+    statusEl.textContent = "";
+    statusEl.classList.remove("error");
   }
 
   async function loadRandomTemplate(name) {
@@ -342,11 +408,16 @@
         loadFile(contentPath)
       ]);
 
-      title = title.replace(PLACEHOLDER, name);
+      // Replace all placeholders with the user's name
+      title = title.replaceAll(PLACEHOLDER, name);
       content = content.replaceAll(PLACEHOLDER, name);
 
+      const greeting = selectedSenatorName
+        ? `Dear Senator ${selectedSenatorName},\n\n`
+        : "";
+
       outputTitle.value = title.trim();
-      outputContent.value = content.trim();
+      outputContent.value = greeting + content.trim();
 
       outputSection.hidden = false;
       outputTitle.focus();
@@ -362,6 +433,113 @@
     }
   }
 
+  // Populate state dropdown from SENATORS_BY_STATE
+  function populateStates() {
+    stateSelect.innerHTML = "";
+    const codes = Object.keys(SENATORS_BY_STATE).sort();
+
+    const placeholderOption = document.createElement("option");
+    placeholderOption.value = "";
+    placeholderOption.textContent = "انتخاب ایالت";
+    placeholderOption.disabled = true;
+    placeholderOption.selected = true;
+    stateSelect.appendChild(placeholderOption);
+
+    codes.forEach(code => {
+      const opt = document.createElement("option");
+      opt.value = code;
+      opt.textContent = code;
+      stateSelect.appendChild(opt);
+    });
+
+    stateSelect.disabled = false;
+  }
+
+  // Load senators.json on page load
+  async function loadSenatorsJson() {
+    try {
+      const resp = await fetch("senators.json");
+      if (!resp.ok) {
+        throw new Error(`Could not load senators.json (status ${resp.status})`);
+      }
+      SENATORS_BY_STATE = await resp.json();
+      populateStates();
+    } catch (err) {
+      console.error(err);
+      stateSelect.innerHTML = "";
+      const opt = document.createElement("option");
+      opt.textContent = "Could not load states";
+      opt.disabled = true;
+      opt.selected = true;
+      stateSelect.appendChild(opt);
+    }
+  }
+
+  loadSenatorsJson();
+
+  // Helper to set selected senator (used by default + radio change)
+  function setSelectedSenator(senator, state) {
+    selectedSenatorName = senator.name;
+    senatorInfo.innerHTML = `
+      <strong>${senator.name}</strong><br>
+      State: ${state}<br>
+      ${senator.phone ? `DC phone: ${senator.phone}` : ""}
+    `;
+  }
+
+  // When state changes, show senators, auto-select first, show button
+  stateSelect.addEventListener("change", () => {
+    const state = stateSelect.value;
+    senatorList.innerHTML = "";
+    senatorInfo.textContent = "";
+    selectedSenatorName = "";
+
+    // 🔹 Hide any previously generated letter
+    resetOutput();
+
+    if (!state || !SENATORS_BY_STATE[state]) {
+      senatorSection.hidden = true;
+      generateBtn.hidden = true;
+      return;
+    }
+
+    const senators = SENATORS_BY_STATE[state];
+    senatorSection.hidden = false;
+    generateBtn.hidden = false;
+
+    senators.forEach((senator, index) => {
+      const id = `senator-${state}-${index}`;
+      const label = document.createElement("label");
+      label.className = "senator-option";
+      label.htmlFor = id;
+
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = "senator-choice";
+      radio.id = id;
+      radio.value = senator.name;
+
+      radio.addEventListener("change", () => {
+        // 🔹 If user switches senator, hide old letter
+        resetOutput();
+        setSelectedSenator(senator, state);
+      });
+
+      const text = document.createElement("span");
+      text.textContent = senator.name;
+
+      label.appendChild(radio);
+      label.appendChild(text);
+      senatorList.appendChild(label);
+
+      // auto-select first senator by default
+      if (index === 0) {
+        radio.checked = true;
+        setSelectedSenator(senator, state);
+      }
+    });
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const name = nameInput.value.trim();
@@ -369,6 +547,7 @@
       alert("لطفاً نام خود را وارد کنید.");
       return;
     }
+    // by this point a state is chosen and first senator auto-selected
     loadRandomTemplate(name);
   });
 
@@ -383,6 +562,7 @@
     }
   });
 </script>
+
 
 </body>
 </html>
