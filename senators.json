@@ -2,497 +2,601 @@
   "MD": [
     {
       "name": "Angela D. Alsobrooks",
-      "phone": "202-224-4524"
+      "phone": "202-224-4524",
+      "contact-link": "https://www.alsobrooks.senate.gov/contact/get-in-touch/"
     },
     {
       "name": "Chris Van Hollen",
-      "phone": "202-224-4654"
+      "phone": "202-224-4654",
+      "contact-link": "https://www.vanhollen.senate.gov/contact/email"
     }
   ],
   "WI": [
     {
       "name": "Tammy Baldwin",
-      "phone": "202-224-5653"
+      "phone": "202-224-5653",
+      "contact-link": "https://www.baldwin.senate.gov/contact/contact-tammy"
     },
     {
       "name": "Ron Johnson",
-      "phone": "202-224-5323"
+      "phone": "202-224-5323",
+      "contact-link": "https://www.ronjohnson.senate.gov/email-the-senator"
     }
   ],
   "IN": [
     {
       "name": "Jim Banks",
-      "phone": "202-224-4814"
+      "phone": "202-224-4814",
+      "contact-link": "https://www.banks.senate.gov/contact/share-your-opinion/"
     },
     {
       "name": "Todd Young",
-      "phone": "202-224-5623"
+      "phone": "202-224-5623",
+      "contact-link": "https://www.young.senate.gov/contact/email-todd/"
     }
   ],
   "WY": [
     {
       "name": "John Barrasso",
-      "phone": "202-224-6441"
+      "phone": "202-224-6441",
+      "contact-link": "https://www.barrasso.senate.gov/contact/"
     },
     {
       "name": "Cynthia M. Lummis",
-      "phone": "202-224-3424"
+      "phone": "202-224-3424",
+      "contact-link": "https://www.lummis.senate.gov/contact/contact-form/"
     }
   ],
   "CO": [
     {
       "name": "Michael F. Bennet",
-      "phone": "202-224-5852"
+      "phone": "202-224-5852",
+      "contact-link": "https://www.bennet.senate.gov/contact/write-to-michael/"
     },
     {
       "name": "John W. Hickenlooper",
-      "phone": "202-224-5941"
+      "phone": "202-224-5941",
+      "contact-link": "https://www.hickenlooper.senate.gov/email-john/"
     }
   ],
   "TN": [
     {
       "name": "Marsha Blackburn",
-      "phone": "202-224-3344"
+      "phone": "202-224-3344",
+      "contact-link": "https://www.blackburn.senate.gov/email-me"
     },
     {
       "name": "Bill Hagerty",
-      "phone": "202-224-4944"
+      "phone": "202-224-4944",
+      "contact-link": "https://www.hagerty.senate.gov/contact-bill/"
     }
   ],
   "CT": [
     {
       "name": "Richard Blumenthal",
-      "phone": "202-224-2823"
+      "phone": "202-224-2823",
+      "contact-link": "https://www.blumenthal.senate.gov/contact/write-to-senator-blumenthal"
     },
     {
       "name": "Christopher Murphy",
-      "phone": "202-224-4041"
+      "phone": "202-224-4041",
+      "contact-link": "https://www.murphy.senate.gov/contact"
     }
   ],
   "DE": [
     {
       "name": "Lisa Blunt Rochester",
-      "phone": "202-224-2441"
+      "phone": "202-224-2441",
+      "contact-link": "https://www.bluntrochester.senate.gov/contact/write-to-lbr/"
     },
     {
       "name": "Christopher A. Coons",
-      "phone": "202-224-5042"
+      "phone": "202-224-5042",
+      "contact-link": "https://www.coons.senate.gov/contact/share-your-opinion/"
     }
   ],
   "NJ": [
     {
       "name": "Cory A. Booker",
-      "phone": "202-224-3224"
+      "phone": "202-224-3224",
+      "contact-link": "https://www.booker.senate.gov/contact/write-to-cory"
     },
     {
       "name": "Andy Kim",
-      "phone": "202-224-4744"
+      "phone": "202-224-4744",
+      "contact-link": "https://www.kim.senate.gov/contact/"
     }
   ],
   "AR": [
     {
       "name": "John Boozman",
-      "phone": "202-224-4843"
+      "phone": "202-224-4843",
+      "contact-link": "https://www.boozman.senate.gov/e-mail-me"
     },
     {
       "name": "Tom Cotton",
-      "phone": "202-224-2353"
+      "phone": "202-224-2353",
+      "contact-link": "https://www.cotton.senate.gov/contact/contact-tom"
     }
   ],
   "AL": [
     {
       "name": "Katie Britt",
-      "phone": "202-224-5744"
+      "phone": "202-224-5744",
+      "contact-link": "https://www.britt.senate.gov/contact/share-your-opinion/"
     },
     {
       "name": "Tommy Tuberville",
-      "phone": "202-224-4124"
+      "phone": "202-224-4124",
+      "contact-link": "https://www.tuberville.senate.gov/contact-old/contact-form/"
     }
   ],
   "NC": [
     {
       "name": "Ted Budd",
-      "phone": "202-224-3154"
+      "phone": "202-224-3154",
+      "contact-link": "https://www.budd.senate.gov/contact"
     },
     {
       "name": "Thom Tillis",
-      "phone": "202-224-6342"
+      "phone": "202-224-6342",
+      "contact-link": "https://www.tillis.senate.gov/contact"
     }
   ],
   "WA": [
     {
       "name": "Maria Cantwell",
-      "phone": "202-224-3441"
+      "phone": "202-224-3441",
+      "contact-link": "https://www.cantwell.senate.gov/contact/email/form"
     },
     {
       "name": "Patty Murray",
-      "phone": "202-224-2621"
+      "phone": "202-224-2621",
+      "contact-link": "https://www.murray.senate.gov/write-to-patty/"
     }
   ],
   "WV": [
     {
       "name": "Shelley Moore Capito",
-      "phone": "202-224-6472"
+      "phone": "202-224-6472",
+      "contact-link": "https://www.capito.senate.gov/contact/contact-my-office"
     },
     {
       "name": "James C. Justice",
-      "phone": "202-224-3954"
+      "phone": "202-224-3954",
+      "contact-link": "https://www.justice.senate.gov/share-your-opinion/"
     }
   ],
   "LA": [
     {
       "name": "Bill Cassidy",
-      "phone": "202-224-5824"
+      "phone": "202-224-5824",
+      "contact-link": "https://www.cassidy.senate.gov/contact/get-in-touch/"
     },
     {
       "name": "John Kennedy",
-      "phone": "202-224-4623"
+      "phone": "202-224-4623",
+      "contact-link": "https://www.kennedy.senate.gov/public/email-me-form"
     }
   ],
   "ME": [
     {
       "name": "Susan M. Collins",
-      "phone": "202-224-2523"
+      "phone": "202-224-2523",
+      "contact-link": "https://www.collins.senate.gov/contact/email-senator-collins"
     },
     {
       "name": "Angus S. King, Jr.",
-      "phone": "202-224-5344"
+      "phone": "202-224-5344",
+      "contact-link": "https://www.king.senate.gov/contact"
     }
   ],
   "TX": [
     {
       "name": "John Cornyn",
-      "phone": "202-224-2934"
+      "phone": "202-224-2934",
+      "contact-link": "https://www.cornyn.senate.gov/share-opinion/"
     },
     {
       "name": "Ted Cruz",
-      "phone": "202-224-5922"
+      "phone": "202-224-5922",
+      "contact-link": "https://www.cruz.senate.gov/contact"
     }
   ],
   "NV": [
     {
       "name": "Catherine Cortez Masto",
-      "phone": "202-224-3542"
+      "phone": "202-224-3542",
+      "contact-link": "https://www.cortezmasto.senate.gov/contact/connect/"
     },
     {
       "name": "Jacky Rosen",
-      "phone": "202-224-6244"
+      "phone": "202-224-6244",
+      "contact-link": "https://www.rosen.senate.gov/email-jacky/"
     }
   ],
   "ND": [
     {
       "name": "Kevin Cramer",
-      "phone": "202-224-2043"
+      "phone": "202-224-2043",
+      "contact-link": "https://www.cramer.senate.gov/contact/contact-kevin"
     },
     {
       "name": "John Hoeven",
-      "phone": "202-224-2551"
+      "phone": "202-224-2551",
+      "contact-link": "https://www.hoeven.senate.gov/contact/email-the-senator/form"
     }
   ],
   "ID": [
     {
       "name": "Mike Crapo",
-      "phone": "202-224-6142"
+      "phone": "202-224-6142",
+      "contact-link": "https://www.crapo.senate.gov/contact/email-me"
     },
     {
       "name": "James E. Risch",
-      "phone": "202-224-2752"
+      "phone": "202-224-2752",
+      "contact-link": "https://www.risch.senate.gov/public/index.cfm/email"
     }
   ],
   "UT": [
     {
       "name": "John R. Curtis",
-      "phone": "202-224-5251"
+      "phone": "202-224-5251",
+      "contact-link": "https://www.curtis.senate.gov/share-your-opinion/"
     },
     {
       "name": "Mike Lee",
-      "phone": "202-224-5444"
+      "phone": "202-224-5444",
+      "contact-link": "https://www.lee.senate.gov/contact"
     }
   ],
   "MT": [
     {
       "name": "Steve Daines",
-      "phone": "202-224-2651"
+      "phone": "202-224-2651",
+      "contact-link": "https://www.daines.senate.gov/services/email-steve/"
     },
     {
       "name": "Tim Sheehy",
-      "phone": "202-224-2644"
+      "phone": "202-224-2644",
+      "contact-link": "https://www.sheehy.senate.gov/contact/share-your-opinion/"
     }
   ],
   "IL": [
     {
       "name": "Tammy Duckworth",
-      "phone": "202-224-2854"
+      "phone": "202-224-2854",
+      "contact-link": "https://www.duckworth.senate.gov/connect/email-tammy"
     },
     {
       "name": "Richard J. Durbin",
-      "phone": "202-224-2152"
+      "phone": "202-224-2152",
+      "contact-link": "https://www.durbin.senate.gov/contact/email"
     }
   ],
   "IA": [
     {
       "name": "Joni Ernst",
-      "phone": "202-224-3254"
+      "phone": "202-224-3254",
+      "contact-link": "https://www.ernst.senate.gov/contact/email-joni"
     },
     {
       "name": "Chuck Grassley",
-      "phone": "202-224-3744"
+      "phone": "202-224-3744",
+      "contact-link": "https://www.grassley.senate.gov/contact/questions-and-comments"
     }
   ],
   "PA": [
     {
       "name": "John Fetterman",
-      "phone": "202-224-4254"
+      "phone": "202-224-4254",
+      "contact-link": "https://www.fetterman.senate.gov/contact/#:~:text=SHARE%20YOUR%20THOUGHTS%20WITH%20JOHN"
     },
     {
       "name": "David H. McCormick",
-      "phone": "202-224-6324"
+      "phone": "202-224-6324",
+      "contact-link": "https://www.mccormick.senate.gov/contact/contact-dave/"
     }
   ],
   "NE": [
     {
       "name": "Deb Fischer",
-      "phone": "202-224-6551"
+      "phone": "202-224-6551",
+      "contact-link": "https://www.fischer.senate.gov/public/?p=email-deb"
     },
     {
       "name": "Pete Ricketts",
-      "phone": "202-224-4224"
+      "phone": "202-224-4224",
+      "contact-link": "https://www.ricketts.senate.gov/contact/share-your-opinion/"
     }
   ],
   "AZ": [
     {
       "name": "Ruben M. Gallego",
-      "phone": "202-224-4521"
+      "phone": "202-224-4521",
+      "contact-link": "https://www.gallego.senate.gov/share-your-opinion/"
     },
     {
       "name": "Mark Kelly",
-      "phone": "202-224-2235"
+      "phone": "202-224-2235",
+      "contact-link": "https://www.kelly.senate.gov/contact/contact-form/"
     }
   ],
   "NY": [
     {
       "name": "Kirsten E. Gillibrand",
-      "phone": "202-224-4451"
+      "phone": "202-224-4451",
+      "contact-link": "https://www.gillibrand.senate.gov/contact/email-me/"
     },
     {
       "name": "Charles E. Schumer",
-      "phone": "202-224-6542"
+      "phone": "202-224-6542",
+      "contact-link": "https://www.schumer.senate.gov/contact/email-chuck"
     }
   ],
   "SC": [
     {
       "name": "Lindsey Graham",
-      "phone": "202-224-5972"
+      "phone": "202-224-5972",
+      "contact-link": "https://www.lgraham.senate.gov/public/index.cfm?p=contact-form"
     },
     {
       "name": "Tim Scott",
-      "phone": "202-224-6121"
+      "phone": "202-224-6121",
+      "contact-link": "https://www.scott.senate.gov/contact/email-me/"
     }
   ],
   "NH": [
     {
       "name": "Maggie Hassan",
-      "phone": "202-224-3324"
+      "phone": "202-224-3324",
+      "contact-link": "https://www.hassan.senate.gov/contact/email#:~:text=message%20form%20below.-,Your%20Name,-PREFIX"
     },
     {
       "name": "Jeanne Shaheen",
-      "phone": "202-224-2841"
+      "phone": "202-224-2841",
+      "contact-link": "https://www.shaheen.senate.gov/contact/contact-jeanne#:~:text=this%20form.-,Your%20Name,-PREFIX*"
     }
   ],
   "MO": [
     {
       "name": "Josh Hawley",
-      "phone": "202-224-6154"
+      "phone": "202-224-6154",
+      "contact-link": "https://www.hawley.senate.gov/contact-senator-hawley/#:~:text=to%20our%20office.-,Contact%20Information,-Prefix"
     },
     {
       "name": "Eric Schmitt",
-      "phone": "202-224-5721"
+      "phone": "202-224-5721",
+      "contact-link": "https://www.schmitt.senate.gov/contact/share-your-opinion/"
     }
   ],
   "NM": [
     {
       "name": "Martin Heinrich",
-      "phone": "202-224-5521"
+      "phone": "202-224-5521",
+      "contact-link": "https://www.heinrich.senate.gov/contact/write-martin"
     },
     {
       "name": "Ben Ray Luján",
-      "phone": "202-224-6621"
+      "phone": "202-224-6621",
+      "contact-link": "https://www.lujan.senate.gov/contact/contact-form/#:~:text=indicates%20required%20fields-,Your%20Name,-PREFIX"
     }
   ],
   "HI": [
     {
       "name": "Mazie K. Hirono",
-      "phone": "202-224-6361"
+      "phone": "202-224-6361",
+      "contact-link": "https://www.hirono.senate.gov/contact/email-me-about-an-issue#:~:text=thoughts%20with%20me.-,Your%20Name,-TITLE*"
     },
     {
       "name": "Brian Schatz",
-      "phone": "202-224-3934"
+      "phone": "202-224-3934",
+      "contact-link": "https://www.schatz.senate.gov/contact/share-your-thoughts"
     }
   ],
   "OH": [
     {
       "name": "Jon Husted",
-      "phone": "202-224-3353"
+      "phone": "202-224-3353",
+      "contact-link": "https://www.husted.senate.gov/contact-jon/"
     },
     {
       "name": "Bernie F. Moreno",
-      "phone": "202-224-2315"
+      "phone": "202-224-2315",
+      "contact-link": "https://www.moreno.senate.gov/share-your-opinion/"
     }
   ],
   "MS": [
     {
       "name": "Cindy Hyde-Smith",
-      "phone": "202-224-5054"
+      "phone": "202-224-5054",
+      "contact-link": "https://www.hydesmith.senate.gov/contact-senator"
     },
     {
       "name": "Roger F. Wicker",
-      "phone": "202-224-6253"
+      "phone": "202-224-6253",
+      "contact-link": "https://www.wicker.senate.gov/contact"
     }
   ],
   "VA": [
     {
       "name": "Tim Kaine",
-      "phone": "202-224-4024"
+      "phone": "202-224-4024",
+      "contact-link": "https://www.kaine.senate.gov/contact/share-your-opinion"
     },
     {
       "name": "Mark R. Warner",
-      "phone": "202-224-2023"
+      "phone": "202-224-2023",
+      "contact-link": "https://www.warner.senate.gov/public/index.cfm?p=ContactPage"
     }
   ],
   "MN": [
     {
       "name": "Amy Klobuchar",
-      "phone": "202-224-3244"
+      "phone": "202-224-3244",
+      "contact-link": "https://www.klobuchar.senate.gov/public/index.cfm/email-amy"
     },
     {
       "name": "Tina Smith",
-      "phone": "202-224-5641"
+      "phone": "202-224-5641",
+      "contact-link": "https://www.smith.senate.gov/share-your-opinion/#:~:text=an%20(*)%20are%20required.-,If%20you%20would,-like%20to%20make"
     }
   ],
   "OK": [
     {
       "name": "James Lankford",
-      "phone": "202-224-5754"
+      "phone": "202-224-5754",
+      "contact-link": "https://www.lankford.senate.gov/contact/email/"
     },
     {
       "name": "Markwayne Mullin",
-      "phone": "202-224-4721"
+      "phone": "202-224-4721",
+      "contact-link": "https://www.mullin.senate.gov/contact/contact-my-office/"
     }
   ],
   "MA": [
     {
       "name": "Edward J. Markey",
-      "phone": "202-224-2742"
+      "phone": "202-224-2742",
+      "contact-link": "https://www.markey.senate.gov/contact/share-your-opinion/"
     },
     {
       "name": "Elizabeth Warren",
-      "phone": "202-224-4543"
+      "phone": "202-224-4543",
+      "contact-link": "https://www.warren.senate.gov/contact/shareyouropinion#:~:text=Internships-,Your%20Information,-Prefix"
     }
   ],
   "KY": [
     {
       "name": "Mitch McConnell",
-      "phone": "202-224-2541"
+      "phone": "202-224-2541",
+      "contact-link": "https://www.mcconnell.senate.gov/public/index.cfm?p=ContactForm"
     },
     {
       "name": "Rand Paul",
-      "phone": "202-224-4343"
+      "phone": "202-224-4343",
+      "contact-link": "https://www.paul.senate.gov/connect/"
     }
   ],
   "OR": [
     {
       "name": "Jeff Merkley",
-      "phone": "202-224-3753"
+      "phone": "202-224-3753",
+      "contact-link": "https://www.merkley.senate.gov/connect/contact/"
     },
     {
       "name": "Ron Wyden",
-      "phone": "202-224-5244"
+      "phone": "202-224-5244",
+      "contact-link": "https://www.wyden.senate.gov/contact/email-ron"
     }
   ],
   "FL": [
     {
       "name": "Ashley Moody",
-      "phone": "202-224-3041"
+      "phone": "202-224-3041",
+      "contact-link": "https://www.moody.senate.gov/contact/"
     },
     {
       "name": "Rick Scott",
-      "phone": "202-224-5274"
+      "phone": "202-224-5274",
+      "contact-link": "https://www.scott.senate.gov/contact/email-me/"
     }
   ],
   "KS": [
     {
       "name": "Jerry Moran",
-      "phone": "202-224-6521"
+      "phone": "202-224-6521",
+      "contact-link": "https://www.moran.senate.gov/public/index.cfm/e-mail-jerry"
+    },
+    {
+      "name": "Roger Marshall",
+      "phone": "202-224-4774",
+      "contact-link": "https://www.marshall.senate.gov/contact/contact-form/"
     }
   ],
   "AK": [
     {
       "name": "Lisa Murkowski",
-      "phone": "202-224-6665"
+      "phone": "202-224-6665",
+      "contact-link": "https://www.murkowski.senate.gov/contact/email"
     },
     {
       "name": "Dan Sullivan",
-      "phone": "202-224-3004"
+      "phone": "202-224-3004",
+      "contact-link": "https://www.sullivan.senate.gov/contact/email"
     }
   ],
   "GA": [
     {
       "name": "Jon Ossoff",
-      "phone": "202-224-3521"
+      "phone": "202-224-3521",
+      "contact-link": "https://www.ossoff.senate.gov/contact-us/share-your-views/"
     },
     {
       "name": "Raphael G. Warnock",
-      "phone": "202-224-3643"
+      "phone": "202-224-3643",
+      "contact-link": "https://www.warnock.senate.gov/contact/contact-form/"
     }
   ],
   "CA": [
     {
       "name": "Alex Padilla",
-      "phone": "202-224-3553"
+      "phone": "202-224-3553",
+      "contact-link": "https://www.padilla.senate.gov/contact/contact-form/"
     },
     {
       "name": "Adam B. Schiff",
-      "phone": "202-224-3841"
+      "phone": "202-224-3841",
+      "contact-link": "https://www.schiff.senate.gov/contact/get-in-touch/"
     }
   ],
   "MI": [
     {
       "name": "Gary C. Peters",
-      "phone": "202-224-6221"
+      "phone": "202-224-6221",
+      "contact-link": "https://www.peters.senate.gov/contact/email-gary"
     },
     {
       "name": "Elissa B. Slotkin",
-      "phone": "202-224-4822"
+      "phone": "202-224-4822",
+      "contact-link": "https://www.slotkin.senate.gov/contact/contact-senator-slotkin/"
     }
   ],
   "RI": [
     {
       "name": "Jack Reed",
-      "phone": "202-224-4642"
+      "phone": "202-224-4642",
+      "contact-link": "https://www.reed.senate.gov/contact/email"
     },
     {
       "name": "Sheldon Whitehouse",
-      "phone": "202-224-2921"
+      "phone": "202-224-2921",
+      "contact-link": "https://www.whitehouse.senate.gov/contact/email-sheldon/"
     }
   ],
   "SD": [
     {
       "name": "Mike Rounds",
-      "phone": "202-224-5842"
+      "phone": "202-224-5842",
+      "contact-link": "https://www.rounds.senate.gov/contact/email-mike"
     },
     {
       "name": "John Thune",
-      "phone": "202-224-2321"
+      "phone": "202-224-2321",
+      "contact-link": "https://www.thune.senate.gov/public/index.cfm/contact"
     }
   ],
   "VT": [
     {
       "name": "Bernard Sanders",
-      "phone": "202-224-5141"
+      "phone": "202-224-5141",
+      "contact-link": "https://www.sanders.senate.gov/contact/contact-form/"
     },
     {
       "name": "Peter Welch",
-      "phone": "202-224-4242"
+      "phone": "202-224-4242",
+      "contact-link": "https://www.welch.senate.gov/email-peter/#email-peter:~:text=202%2D224%2D4242.-,Your%20Information,-Prefix"
     }
   ]
 }

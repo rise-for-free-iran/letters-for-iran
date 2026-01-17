@@ -37,6 +37,10 @@
       font-size: 0.95rem;
       color: #4b5563;
     }
+
+    header #description {
+      text-align: right;
+    }
     
     .layout {
       display: flex;
@@ -89,12 +93,32 @@
     /* Form */
     form {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
+      flex-direction: column;
+      gap: 0.9rem;
       margin-bottom: 1rem;
     }
 
+    /* One row per field */
+    .field-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    /* Fixed-width label so rows align nicely */
+    .field-row label {
+      min-width: 150px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    /* Input / select fills remaining space */
+    .field-row input[type="text"],
+    .field-row select {
+      flex: 1;
+      max-width: 260px;   /* controls desktop width */
+    }
+    
     label {
       font-size: 0.9rem;
     }
@@ -111,7 +135,7 @@
     }
 
     input[type="text"] {
-      min-width: min(240px, 100%);
+      min-width: min(160px, 100%);
     }
 
     input[type="text"]::placeholder {
@@ -135,6 +159,7 @@
       font-weight: 500;
       transition: background 0.12s ease, transform 0.06s ease;
       white-space: nowrap;
+      font-family: inherit;
     }
 
     button:hover {
@@ -152,6 +177,15 @@
       margin-top: 0.15rem;
     }
 
+    #full-name {
+      direction: ltr;
+      text-align: left;
+    }
+
+    #senator-list {
+      margin-bottom: 0.75rem;
+    }
+
     /* Senator selection */
     #senator-section {
       width: 100%;
@@ -167,6 +201,17 @@
       margin: 0 0 0.35rem;
     }
 
+
+    #senator-info a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    #senator-info a:hover {
+      text-decoration: underline;
+    }
+
     .senator-option {
       display: flex;
       align-items: center;
@@ -178,10 +223,30 @@
       accent-color: #2563eb;
     }
 
+    .senator-divider {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 0.75rem 0;
+    }
+
     #senator-info {
-      margin-top: 0.4rem;
+      margin-top: 0.75rem;
       font-size: 0.85rem;
+      line-height: 1.6;
       color: #4b5563;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 0.4rem;
+      /* font-size: 1.05rem; */
+      font-weight: 600;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
     }
 
     /* Output section */
@@ -228,12 +293,15 @@
       min-height: 200px;
     }
 
-    .output-actions {
+    .copy-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .copy-row button {
+      min-width: 160px;
+      background-color: #16a34a;
     }
 
     #copy-btn {
@@ -277,35 +345,45 @@
 <body>
   <div class="page">
     <header>
-      <h1>Letters for Iran</h1>
+      <h1>مکاتبه برای آزادی ایران</h1>
       
       <!-- Short bilingual intro -->
       <p class="intro-fa" lang="fa" dir="rtl">
-        در خارج از ایران زندگی میکنید و میخواهید کمکی به انقلاب مردم ایران بکنید؟
+        سلام هم‌وطنِ من. اگه در خارج از ایران زندگی میکنی و میخوای کمکی به انقلاب ملی مردم بکنی، خوش اومدی.
       </p>
 
-      <p class="intro-fa" lang="fa" dir="rtl">
-        این وب‌سایت به شما کمک میکند که راحت‌تر سناتورها و نمایندگان خود را یافته و با آنها مکاتبه کنید.
-        خیلی ساده، بعد از وارد کردن نامتان، یکی از چند صد نامه‌ای که از قبل تولید شده است به طور شانسی با نام شما تولید میشود.
+      <img
+        src="hero.jpg"
+        alt="Protester holding Iran flag"
+        class="hero-image"
+      />
+
+      <p class="intro-fa" id="description" lang="fa" dir="rtl">
+        این وب‌سایت کمک میکنه که راحت‌تر سناتورها و نمایندگان کشور و ایالت/استان محل زندگیت رو پیدا کنی و باهاشون مکاتبه کنی.
+        خیلی ساده، بعد از وارد کردن اسمت، یکی از چندین نامه‌ای که از قبل تولید شده به طور شانسی به اسم تو و مشخصات گیرنده‌ی مورد نظرت تولید میشه که می‌تونی با سلیقه‌ی خودت ویرایش کنی و برای ارسال استفاده کنی.
       </p>
+
     </header>
-    
-    <p class="small-note" dir="rtl">
-      به هیچ عنوان نام شما ذخیره، جمع‌آوری یا به اشتراک گذاشته نمی‌شود. نام شما فقط برای جایگزین 
-      کردن قسمت خالی متن به کار میرود.
+
+
+    <p class="small-note" lang="fa" dir="rtl">
+      این یک وب‌سایت ایستاست، به این معنی که
+      <b>به هیچ عنوان</b>
+         اسم و مشخصاتت ذخیره، جمع‌آوری یا به اشتراک گذاشته نمی‌شه. اسمت فقط برای جایگزین 
+      کردن قسمت خالی متن به کار میره.
+    </p>
+
+    <p class="small-note" lang="fa"  dir="rtl">
+      اطلاعات کشورهای دیگه و نحوه‌ی تماس با نمایندگانشون رو هم به زودی اضافه می‌کنیم.
     </p>
     
-    <img
-      src="hero.jpg"
-      alt="Protester holding Iran flag"
-      class="hero-image"
-    />
-    
+   
     <div class="layout">
       <section class="card" aria-label="Generate your letter">
 
-        <!-- FORM wraps senator-section AND the button -->
-        <form id="name-form" dir="rtl">
+      <form id="name-form" dir="rtl">
+
+        <div class="field-row">
           <label for="full-name">اسم و فامیل به انگلیسی</label>
           <input
             type="text"
@@ -314,34 +392,40 @@
             placeholder="e.g. Sara Ahmadi"
             autocomplete="name"
           />
+        </div>
 
+        <div class="field-row">
           <label for="state-select">ایالت</label>
           <select id="state-select" disabled>
             <option>Loading states…</option>
           </select>
+        </div>
 
-          <!-- Senators for selected state -->
-          <section id="senator-section" dir="rtl" hidden>
-            <p>انتخاب کن که با کدام سناتور میخواهی تماس بگیری</p>
-            <div id="senator-list"></div>
-            <div id="senator-info"></div>
-          </section>
+        <section id="senator-section" dir="rtl" hidden>
+          <p>انتخاب کن که با کدام سناتور میخواهی تماس بگیری</p>
+          <div id="senator-list"></div>
+          <hr class="senator-divider">
+          <div id="senator-info"></div>
+        </section>
 
-          <!-- Button: hidden at first, appears only after state selection -->
-          <button id="generate-btn" type="submit" hidden>نامه را تولید کن</button>
-        </form>
+        <button id="generate-btn" type="submit" hidden>نامه را تولید کن</button>
+      </form>
 
         <section id="output-section" hidden>
           <h3 dir="rtl">عنوان نامه</h3>
           <textarea id="output-title" spellcheck="true"></textarea>
+          <div class="copy-row">
+            <button type="button" id="copy-title-btn">عنوان را کپی کن</button>
+          </div>
 
           <h3 dir="rtl" style="margin-top:1rem;">متن نامه</h3>
           <textarea id="output-content" spellcheck="true"></textarea>
-
-          <div class="output-actions">
-            <button type="button" id="copy-btn">متن نامه را کپی کن</button>
-            <p id="status"></p>
+          <div class="copy-row">
+            <button type="button" id="copy-content-btn">متن نامه را کپی کن</button>
           </div>
+          
+          <p id="status" dir="rtl"></p>
+
   
           <p class="modify-note" lang="fa" dir="rtl">
             این متن فقط یک نقطه‌ی شروع است. با خیال راحت آن را هر طور که می‌خواهید تغییر دهید تا با داستان، لحن و خواسته‌های خودتان هماهنگ شود.
@@ -355,8 +439,8 @@
   let SENATORS_BY_STATE = {};
   let selectedSenatorName = ""; // keep track of chosen senator
 
-  const TITLE_COUNT = 500;
-  const CONTENT_COUNT = 500;
+  const TITLE_COUNT = 150;
+  const CONTENT_COUNT = 150;
   const PLACEHOLDER = "_____";
 
   const form = document.getElementById("name-form");
@@ -364,7 +448,8 @@
   const outputSection = document.getElementById("output-section");
   const outputTitle = document.getElementById("output-title");
   const outputContent = document.getElementById("output-content");
-  const copyBtn = document.getElementById("copy-btn");
+  const copyTitleBtn = document.getElementById("copy-title-btn");
+  const copyContentBtn = document.getElementById("copy-content-btn");
   const statusEl = document.getElementById("status");
 
   const stateSelect = document.getElementById("state-select");
@@ -480,10 +565,26 @@
   // Helper to set selected senator (used by default + radio change)
   function setSelectedSenator(senator, state) {
     selectedSenatorName = senator.name;
+
+    const phoneLine = senator.phone
+      ? `${senator.phone}<br>`
+      : "";
+
+    const contactLine = senator["contact-link"]
+      ? `<a class="contact-link" href="${senator["contact-link"]}" target="_blank" rel="noopener noreferrer">
+          این لینک
+        </a>`
+      : "";
+
     senatorInfo.innerHTML = `
-      <strong>${senator.name}</strong><br>
-      State: ${state}<br>
-      ${senator.phone ? `DC phone: ${senator.phone}` : ""}
+        بعد از تولید نامه، عنوان و متن نامه را کپی کن و از طریق
+        ${contactLine}
+        به سناتور 
+        ${senator.name}
+        ارسال کن.
+        <br>
+        اگه دوست داشتی زنگ بزنی، شماره دفتر واشنگتن دی‌سی‌ش اینه:
+      ${phoneLine}
     `;
   }
 
@@ -551,16 +652,35 @@
     loadRandomTemplate(name);
   });
 
-  copyBtn.addEventListener("click", async () => {
+  copyTitleBtn.addEventListener("click", async () => {
     try {
-      await navigator.clipboard.writeText(outputContent.value);
-      const oldLabel = copyBtn.textContent;
-      copyBtn.textContent = "Copied!";
-      setTimeout(() => (copyBtn.textContent = oldLabel), 1500);
-    } catch (err) {
-      alert("Could not copy. Please select the text and use Ctrl+C / Cmd+C.");
+      await navigator.clipboard.writeText(outputTitle.value);
+      showStatus("عنوان کپی شد!");
+    } catch {
+      showStatus("خطا در کپی کردن عنوان", true);
     }
   });
+
+  copyContentBtn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(outputContent.value);
+      showStatus("متن نامه کپی شد!");
+    } catch {
+      showStatus("خطا در کپی کردن متن نامه", true);
+    }
+  });
+
+  function showStatus(message, isError = false) {
+    statusEl.textContent = message;
+    if (isError) {
+      statusEl.classList.add("error");
+    } else {
+      statusEl.classList.remove("error");
+    }
+    setTimeout(() => {
+      statusEl.textContent = "";
+    }, 3000);
+  }
 </script>
 
 
